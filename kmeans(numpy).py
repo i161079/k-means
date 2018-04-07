@@ -47,12 +47,3 @@ def kmeans(in_dataSet, k, e):
 testX = np.array(loadDataSet('test.txt'))
 dataSet,_ = kmeans(testX, 4, 100)
 print(dataSet)
-Y1 = dataSet[dataSet[:, -1] == 0, :-1]
-Y2 = dataSet[dataSet[:, -1] == 1, :-1]
-Y3 = dataSet[dataSet[:, -1] == 2, :-1]
-Y4 = dataSet[dataSet[:, -1] == 3, :-1]
-plt.scatter(Y1[:, 0],Y1[:, 1], color='red')
-plt.scatter(Y2[:, 0],Y2[:, 1], color='blue')
-plt.scatter(Y3[:, 0],Y3[:, 1], color='yellow')
-plt.scatter(Y4[:, 0],Y4[:, 1], color='green')
-plt.show()
